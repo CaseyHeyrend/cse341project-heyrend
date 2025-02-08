@@ -3,24 +3,29 @@
     "fullName": "Monkey D. Luffy",
     "orgin": "East Blue",
     "birthday": "05/05",
-    "affiliations": "Straw Hat Pirate",
     "fruitType": "Mythical Zoan",
-    "status": "Alive"
+    "status": "Alive",
+    "affiliations": "StrawHat Pirate",
+    "position": "Captain"
   },
   {
     "fullName": "Roronoa Zoro",
     "orgin": "East Blue",
     "birthday": "11/11",
-    "affiliations": "Straw Hat Pirate",
     "fruitType": "N/A",
     "status": "Alive"
+    "affiliations": "StrawHat Pirate",
+    "position": "Swordsman"
+    
   },
   { 
     "fullName": "Trafalgar D. Water Law",
     "orgin": "North Blue",
     "birthday": "10/06",
-    "affiliations": "Heart Pirate",
     "fruitType": "Paramecia",
-    "status": "Alive"
+    "status": "Alive",
+    "affiliations": "Heart Pirate",
+    "position": "Captain"
+    
   }
 ]
