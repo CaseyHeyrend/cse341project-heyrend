@@ -16,7 +16,7 @@ const doc = {
   },
   servers: [
     {
-      url: "https://cse341-heyrend.onrender.com",
+      url: "https://cse341project-heyrend.onrender.com",
       description: "Production server",
     },
     {

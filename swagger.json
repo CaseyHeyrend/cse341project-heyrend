@@ -1,0 +1,202 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.4.0",
+    "title": "My CSE 341 Contacts API",
+    "description": "Project API for BYU-Idaho CSE 341 Winter 2025",
+    "contact": {
+      "name": "API Support - Casey Heyrend",
+      "email": "hey12008@byui.edu"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/license/mit"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://cse341project-heyrend.onrender.com",
+      "description": "Production server"
+    },
+    {
+      "url": "http://localhost:8080",
+      "description": "Local development server"
+    }
+  ],
+  "paths": {
+    "/pirates/": {
+      "get": {
+        "summary": "Get all known pirates",
+        "description": "Returns all pirates",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Pirates"
+        ],
+        "summary": "Add a pirate",
+        "description": "Add a pirate to the database",
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fullName": {
+                    "example": "any"
+                  },
+                  "origin": {
+                    "example": "any"
+                  },
+                  "birthday": {
+                    "example": "any"
+                  },
+                  "status": {
+                    "example": "any"
+                  },
+                  "fruitType": {
+                    "example": "any"
+                  },
+                  "affiliations": {
+                    "example": "any"
+                  },
+                  "position": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/pirates/{id}": {
+      "get": {
+        "tags": [
+          "Pirates"
+        ],
+        "summary": "Get pirates by id",
+        "description": "Returns a pirates with specified id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Pirates"
+        ],
+        "summary": "Update a existing pirate by id",
+        "description": "Update a existing pirate in the database by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fullName": {
+                    "example": "any"
+                  },
+                  "origin": {
+                    "example": "any"
+                  },
+                  "birthday": {
+                    "example": "any"
+                  },
+                  "status": {
+                    "example": "any"
+                  },
+                  "fruitType": {
+                    "example": "any"
+                  },
+                  "affiliations": {
+                    "example": "any"
+                  },
+                  "position": {
+                    "example": "any"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Pirates"
+        ],
+        "summary": "Delete a pirate by id",
+        "description": "Delete a pirate in the database by id",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/api-docs/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}

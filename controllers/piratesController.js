@@ -23,13 +23,19 @@ piratesController.getPirate = async (req, res, next) => {
     #swagger.description = 'Returns a pirates with specified id'
     #swagger.tags = ['Pirates']
     */
-    const pirateId = ObjectId.createFromHexString(req.params.id);
-    const result = await mongodb.getDb().db().collection("pirates").findOne({ _id: pirateId });
-
-    result.toArray().then((lists) => {
+    try {
+        const pirateId = ObjectId.createFromHexString(req.params.id);
+        const result = await mongodb.getDb().db().collection("pirates").findOne({ _id: pirateId });
+    
+        if (!result) {
+          return res.status(404).json({ message: "Users not found." });
+        }
         res.setHeader("Content-Type", "application/json");
-        res.status(200).json(lists[0]);
-      });
+        res.status(200).json(result);
+      } catch (error) {
+        console.error("Error getting user:", error);
+        res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
+      }
     };
 
 /* 

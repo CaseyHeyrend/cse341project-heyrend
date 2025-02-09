@@ -3,8 +3,11 @@
 ### Home
 GET http://localhost:8080/
 
-### pirates
+### All pirates
 GET http://localhost:8080/pirates
+
+### pirate by Id
+GET http://localhost:8080/pirates/67a80eecac70f2e17605467b
 ### Create contact Post
 POST http://localhost:8080/ HTTP/1.1
 content-type: application/json
