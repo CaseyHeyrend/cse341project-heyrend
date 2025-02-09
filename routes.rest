@@ -9,23 +9,23 @@ GET http://localhost:8080/pirates
 ### pirate by Id
 GET http://localhost:8080/pirates/67a80eecac70f2e17605467b
 ### Create contact Post
-POST http://localhost:8080/ HTTP/1.1
+POST http://localhost:8080/pirates HTTP/1.1
 content-type: application/json
 
 {
-"firstName": "Heidi", "lastName": "Heyrend", "email": "heidi.heyrend@test.com", "favoriteColor": "Blue", "birthday": "12/28/1964"
+    "fullName": "Nico Robin", "orgin": "West Blue", "birthday": "02/06", "status": "Alive", "fruitType": "Paramecia", "affiliations": "StrawHat Pirate", "position": "Archaeologist"
 }
 
 ### Put Contact
-PUT http://localhost:8080/ HTTP/1.1
+PUT http://localhost:8080/pirates/67a80eecac70f2e176054680 HTTP/1.1
 content-type: application/json
 
 {
-"firstName": "Morgan", "lastName": "Turner", "email": "MTurn@test.com", "favoriteColor": "Orange", "birthday": "08/28/1986" 
+    "fullName": "Shanks", "orgin": "West Blue", "birthday": "03/09", "status": "Alive", "fruitType": "N/A", "affiliations": "Red Haired Pirate", "position": "Captain"
 }
 
 ### Delete Contact
-DELETE http://localhost:8080/  HTTP/1.1
+DELETE http://localhost:8080/67a81801a2456f6068e404aa  HTTP/1.1
 content-type: application/json
 
 ### Swagger

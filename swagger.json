@@ -24,7 +24,7 @@
     }
   ],
   "paths": {
-    "/pirates/": {
+    "/pirates": {
       "get": {
         "summary": "Get all known pirates",
         "description": "Returns all pirates",
