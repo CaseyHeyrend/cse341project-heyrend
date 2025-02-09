@@ -33,14 +33,14 @@ GET http://localhost:8080/api-docs/
 
 // PRODUCTION Deploy or render.com 
 ### The index and Name
-GET https://cse341project-heyrend.onrender.com
+GET https://cse341project-heyrend.onrender.com/pirates
 
-### contacts
-GET https://cse341-heyrend.onrender.com/contacts
+### pirates
+GET https://cse341project-heyrend.onrender.com/pirates
 
 
 ### Create contact Post
-POST https://cse341-heyrend.onrender.com/contacts/ HTTP/1.1
+POST https://cse341-heyrend.onrender.com/pirates/ HTTP/1.1
 content-type: application/json
 
 {
@@ -48,14 +48,14 @@ content-type: application/json
 } 
 
 ### Put Contact 
-PUT https://cse341-heyrend.onrender.com/contacts/679ef8001ac462f2e4bc7190 HTTP/1.1
+PUT https://cse341-heyrend.onrender.com/pirates/679ef8001ac462f2e4bc7190 HTTP/1.1
 content-type: application/json
 
 {
 "firstName": "Morgan", "lastName": "Turner", "email": "MTurn@test.com", "favoriteColor": "Orange", "birthday": "08/28/1986" 
 }
 ### Delete Contact
-DELETE https://cse341-heyrend.onrender.com/contacts/679ef7571ac462f2e4bc718f HTTP/1.1
+DELETE https://cse341-heyrend.onrender.com/pirates/679ef7571ac462f2e4bc718f HTTP/1.1
 content-type: application/json
 
 ### Swagger
