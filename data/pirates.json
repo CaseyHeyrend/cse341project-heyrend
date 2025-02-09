@@ -13,7 +13,7 @@
     "orgin": "East Blue",
     "birthday": "11/11",
     "fruitType": "N/A",
-    "status": "Alive"
+    "status": "Alive",
     "affiliations": "StrawHat Pirate",
     "position": "Swordsman"
     
@@ -26,6 +26,42 @@
     "status": "Alive",
     "affiliations": "Heart Pirate",
     "position": "Captain"
-    
+  },
+  { 
+    "fullName": "Trafalgar D. Water Law",
+    "orgin": "North Blue",
+    "birthday": "10/06",
+    "fruitType": "Paramecia",
+    "status": "Alive",
+    "affiliations": "Heart Pirate",
+    "position": "Captain"
+  },
+  { 
+    "fullName": "Trafalgar D. Water Law",
+    "orgin": "North Blue",
+    "birthday": "10/06",
+    "fruitType": "Paramecia",
+    "status": "Alive",
+    "affiliations": "Heart Pirate",
+    "position": "Captain"
+  },
+  { 
+    "fullName": "Trafalgar D. Water Law",
+    "orgin": "North Blue",
+    "birthday": "10/06",
+    "fruitType": "Paramecia",
+    "status": "Alive",
+    "affiliations": "Heart Pirate",
+    "position": "Captain"
+  },
+  { 
+    "fullName": "",
+    "orgin": "",
+    "birthday": "",
+    "fruitType": "",
+    "status": "",
+    "affiliations": "",
+    "position": ""
   }
+
 ]

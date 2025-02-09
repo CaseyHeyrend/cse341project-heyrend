@@ -1,1 +1,56 @@
+// LOCALHOST 
 
+### Home
+GET http://localhost:8080/
+### Create contact Post
+POST http://localhost:8080/ HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "Heidi", "lastName": "Heyrend", "email": "heidi.heyrend@test.com", "favoriteColor": "Blue", "birthday": "12/28/1964"
+}
+
+### Put Contact
+PUT http://localhost:8080/ HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "Morgan", "lastName": "Turner", "email": "MTurn@test.com", "favoriteColor": "Orange", "birthday": "08/28/1986" 
+}
+
+### Delete Contact
+DELETE http://localhost:8080/  HTTP/1.1
+content-type: application/json
+
+### Swagger
+GET http://localhost:8080/api-docs/
+
+// PRODUCTION Deploy or render.com 
+### The index and Name
+GET https://cse341project-heyrend.onrender.com
+
+### contacts
+GET https://cse341-heyrend.onrender.com/contacts
+
+
+### Create contact Post
+POST https://cse341-heyrend.onrender.com/contacts/ HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "Heidi", "lastName": "Heyrend", "email": "heidi.heyrend@test.com", "favoriteColor": "Blue", "birthday": "12/28/1964"
+} 
+
+### Put Contact 
+PUT https://cse341-heyrend.onrender.com/contacts/679ef8001ac462f2e4bc7190 HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "Morgan", "lastName": "Turner", "email": "MTurn@test.com", "favoriteColor": "Orange", "birthday": "08/28/1986" 
+}
+### Delete Contact
+DELETE https://cse341-heyrend.onrender.com/contacts/679ef7571ac462f2e4bc718f HTTP/1.1
+content-type: application/json
+
+### Swagger
+GET https://cse341-heyrend.onrender.com/api-docs/
