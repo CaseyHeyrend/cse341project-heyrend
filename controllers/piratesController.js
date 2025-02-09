@@ -28,12 +28,12 @@ piratesController.getPirate = async (req, res, next) => {
         const result = await mongodb.getDb().db().collection("pirates").findOne({ _id: pirateId });
     
         if (!result) {
-          return res.status(404).json({ message: "Users not found." });
+          return res.status(404).json({ message: "Pirates not found." });
         }
         res.setHeader("Content-Type", "application/json");
         res.status(200).json(result);
       } catch (error) {
-        console.error("Error getting user:", error);
+        console.error("Error getting pirate:", error);
         res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
       }
     };
