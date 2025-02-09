@@ -49,7 +49,7 @@ piratesController.createPirate = async (req, res, next) => {
     */ 
    const pirate = {
     fullName: req.body.fullName,
-    origin: req.body.origin,
+    birthPlace: req.body.birthPlace,
     birthday: req.body.birthday,
     status: req.body.status,
     fruitType: req.body.fruitType,
@@ -77,7 +77,7 @@ piratesController.updatePirate = async (req, res, next) => {
  const pirateId = ObjectId.createFromHexString(req.params.id);
  const pirate = {
     fullName: req.body.fullName,
-    origin: req.body.origin,
+    birthPlace: req.body.birthPlace,
     birthday: req.body.birthday,
     status: req.body.status,
     fruitType: req.body.fruitType,

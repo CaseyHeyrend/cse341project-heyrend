@@ -1,7 +1,7 @@
 [
   {
     "fullName": "Monkey D. Luffy",
-    "orgin": "East Blue",
+    "birthPlace": "East Blue",
     "birthday": "05/05",
     "status": "Alive",
     "fruitType": "Mythical Zoan",
@@ -10,7 +10,7 @@
   },
   {
     "fullName": "Roronoa Zoro",
-    "orgin": "East Blue",
+    "birthPlace": "East Blue",
     "birthday": "11/11",
     "status": "Alive",
     "fruitType": "N/A",
@@ -19,7 +19,7 @@
   },
   { 
     "fullName": "Trafalgar D. Water Law",
-    "orgin": "North Blue",
+    "birthPlace": "North Blue",
     "birthday": "10/06",
     "status": "Alive",
     "fruitType": "Paramecia",
@@ -28,7 +28,7 @@
   },
   { 
     "fullName": "Portgas D. Ace",
-    "orgin": "South Blue",
+    "birthPlace": "South Blue",
     "birthday": "01/01",
     "status": "Deceased",
     "fruitType": "Logia",
@@ -37,7 +37,7 @@
   },
   { 
     "fullName": "Marshall D. Teach",
-    "orgin": "Grand Line",
+    "birthPlace": "Grand Line",
     "birthday": "08/03",
     "status": "Alive",
     "fruitType": "Logia",
@@ -46,7 +46,7 @@
   },
   { 
     "fullName": "Edward Newgate",
-    "orgin": "Grand Line",
+    "birthPlace": "Grand Line",
     "birthday": "04/06",
     "status": "Deceased",
     "fruitType": "Paramecia",
@@ -55,7 +55,7 @@
   },
   { 
     "fullName": "Figarland Shanks",
-    "orgin": "West Blue",
+    "birthPlace": "West Blue",
     "birthday": "03/09",
     "status": "Alive",
     "fruitType": "N/A",

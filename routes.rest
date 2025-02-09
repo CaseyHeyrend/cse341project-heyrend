@@ -56,7 +56,7 @@ content-type: application/json
     "fullName": "Shanks", "orgin": "West Blue", "birthday": "03/09", "status": "Alive", "fruitType": "N/A", "affiliations": "Red Haired Pirate", "position": "Captain"
 }
 ### Delete pirate
-DELETE https://cse341project-heyrend.onrender.com/pirates/67a81ece826f2704f267c3d2 HTTP/1.1
+DELETE https://cse341project-heyrend.onrender.com/pirates/67a81f12826f2704f267c3d3 HTTP/1.1
 content-type: application/json
 
 ### Swagger

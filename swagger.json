@@ -57,7 +57,7 @@
                   "fullName": {
                     "example": "any"
                   },
-                  "origin": {
+                  "birthPlace": {
                     "example": "any"
                   },
                   "birthday": {
@@ -144,7 +144,7 @@
                   "fullName": {
                     "example": "any"
                   },
-                  "origin": {
+                  "birthPlace": {
                     "example": "any"
                   },
                   "birthday": {
