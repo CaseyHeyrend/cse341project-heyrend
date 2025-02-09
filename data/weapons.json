@@ -1,5 +1,80 @@
 [
     {
+      "name": "Wado Ichimonji ",
+      "classification": "Meito",
+      "grade": "21 Great Grade Blades",
+      "category": "Sword",
+      "type": "Katana",
+      "status": "Alive",
+      "fruitType": "N/A"
         
+    },
+    {
+      "name": "Sandai Kitetsu",
+      "classification": "Meito",
+      "grade": "Grade Blades",
+      "category": "Sword",
+      "type": "Katana",
+      "status": "Alive",
+      "fruitType": "N/A"
+    
+    },
+
+    { 
+      "name": "Yubashiri",
+      "classification": "Meito",
+      "grade": "50 Skillful Grade Blades",
+      "category": "Sword",
+      "type": "Katana",
+      "status": "Destroyed",
+      "fruitType": "N/A"
+    
+    },
+    { 
+        "name": "Enma",
+        "classification": "Meito",
+        "grade": "21 Great Grade Blades",
+        "category": "Sword",
+        "type": "Katana",
+        "status": "Alive",
+        "fruitType": "N/A"
+    },
+    { 
+        "name": "Gryphon",
+        "classification": "Meito",
+        "grade": "unknown grade",
+        "category": "Sword",
+        "type": "Saber",
+        "status": "Alive",
+        "fruitType": "N/A"
+    },
+    { 
+        "name": "Kikoku",
+        "classification": "Meito",
+        "grade": "Ungraded",
+        "category": "Sword",
+        "type": "Ōdachi",
+        "status": "Alive",
+        "fruitType": "N/A"
+    },
+    { 
+        "name": "Murakumogiri",
+        "classification": "Meito",
+        "grade": "12 Supreme Grade Blades",
+        "category": "Naginata",
+        "type": "Naginata",
+        "status": "Alive",
+        "fruitType": "N/A"
+    },
+    { 
+        "name": "Kuro Kabuto",
+        "classification": "",
+        "grade": "",
+        "category": "Slingshot",
+        "type": "Slingshot",
+        "status": "Alive",
+        "fruitType": "N/A"
     }
-]
+  
+  ]
+  
