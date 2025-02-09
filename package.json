@@ -1,0 +1,37 @@
+{
+  "name": "cse341project-heyrend",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "swagger": "node ./swagger.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaseyHeyrend/cse341project-heyrend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaseyHeyrend/cse341project-heyrend/issues"
+  },
+  "homepage": "https://github.com/CaseyHeyrend/cse341project-heyrend#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "globals": "^15.14.0",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "prettier": "3.4.2",
+    "swagger-autogen": "^2.23.7"
+  }
+}
