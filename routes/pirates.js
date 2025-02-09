@@ -5,7 +5,6 @@ const piratesController = require("../controllers/piratesController");
 
 // Get all pirates
 router.get("/", piratesController.getAll);
-
 // Get pirates by Id
 router.get("/:id", piratesController.getPirate);
 // Insert one pirates into the database
