@@ -21,7 +21,7 @@ PUT http://localhost:8080/pirates/67a820f2ac70f2e17605468a HTTP/1.1
 content-type: application/json
 
 {
-    "fullName": "Shanks", "birthPlace": "West Blue", "birthday": "03/09", "status": "Alive", "fruitType": "N/A", "affiliations": "Red Haired Pirate", "position": "Captain"
+    "fullName": "Red-Hair Shanks", "birthPlace": "West Blue", "birthday": "03/09", "status": "Alive", "fruitType": "N/A", "affiliations": "Red Haired Pirate", "position": "Captain"
 }
 
 ### Delete pirate
@@ -39,7 +39,7 @@ GET https://cse341project-heyrend.onrender.com
 GET https://cse341project-heyrend.onrender.com/pirates
 
 ### Get pirate bt Id 
-GET https://cse341project-heyrend.onrender.com/pirates/67a80eecac70f2e17605467b
+GET https://cse341project-heyrend.onrender.com/pirates/67a820f2ac70f2e176054685
 
 ### Create pirate Post
 POST https://cse341project-heyrend.onrender.com/pirates/ HTTP/1.1
@@ -56,7 +56,7 @@ content-type: application/json
     "fullName": "Shanks", "birthPlace": "West Blue", "birthday": "03/09", "status": "Alive", "fruitType": "N/A", "affiliations": "Red Haired Pirate", "position": "Captain"
 }
 ### Delete pirate
-DELETE https://cse341project-heyrend.onrender.com/pirates/67a8227a67cd4b73113dfa11 HTTP/1.1
+DELETE https://cse341project-heyrend.onrender.com/pirates/67a83242fb7cd1f647153e32 HTTP/1.1
 content-type: application/json
 
 ### Swagger
