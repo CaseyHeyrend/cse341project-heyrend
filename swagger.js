@@ -3,7 +3,7 @@ const swaggerAutogen = require("swagger-autogen")({ openapi: "3.0.0" });
 const doc = {
   info: {
     version: "1.4.0",
-    title: "My CSE 341 Pirates API",
+    title: "My CSE 341 One Piece Pirates API",
     description: "Project API for BYU-Idaho CSE 341 Winter 2025",
     contact: {
       name: "API Support - Casey Heyrend",
