@@ -1,4 +1,4 @@
-const mongodb = require("../database/mongo-connect");
+const mongodb = require("../database/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const weaponsController = {}
