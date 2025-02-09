@@ -8,6 +8,6 @@ router.get("/", (req, res) => {
 
 router.use("/pirates", require("./pirates"));
 
-router.use("/api-docs", require("./swagger"));
+//router.use("/api-docs", require("./swagger"));
 
 module.exports = router;

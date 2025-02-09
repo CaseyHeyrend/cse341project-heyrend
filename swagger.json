@@ -24,7 +24,7 @@
     }
   ],
   "paths": {
-    "/pirates": {
+    "/pirates/": {
       "get": {
         "summary": "Get all known pirates",
         "description": "Returns all pirates",
@@ -102,6 +102,12 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -184,16 +190,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/api-docs/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
           }
         }
       }
