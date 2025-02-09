@@ -8,7 +8,7 @@ GET http://localhost:8080/pirates
 
 ### pirate by Id
 GET http://localhost:8080/pirates/67a80eecac70f2e17605467b
-### Create contact Post
+### Create pirate Post
 POST http://localhost:8080/pirates HTTP/1.1
 content-type: application/json
 
@@ -16,7 +16,7 @@ content-type: application/json
     "fullName": "Nico Robin", "orgin": "West Blue", "birthday": "02/06", "status": "Alive", "fruitType": "Paramecia", "affiliations": "StrawHat Pirate", "position": "Archaeologist"
 }
 
-### Put Contact
+### Put pirate
 PUT http://localhost:8080/pirates/67a80eecac70f2e176054680 HTTP/1.1
 content-type: application/json
 
@@ -24,8 +24,8 @@ content-type: application/json
     "fullName": "Shanks", "orgin": "West Blue", "birthday": "03/09", "status": "Alive", "fruitType": "N/A", "affiliations": "Red Haired Pirate", "position": "Captain"
 }
 
-### Delete Contact
-DELETE http://localhost:8080/67a81801a2456f6068e404aa  HTTP/1.1
+### Delete pirate
+DELETE http://localhost:8080/67a81ece826f2704f267c3d2 HTTP/1.1
 content-type: application/json
 
 ### Swagger
@@ -33,30 +33,31 @@ GET http://localhost:8080/api-docs/
 
 // PRODUCTION Deploy or render.com 
 ### The index and Name
-GET https://cse341project-heyrend.onrender.com/pirates
+GET https://cse341project-heyrend.onrender.com
 
 ### pirates
 GET https://cse341project-heyrend.onrender.com/pirates
 
+### Get pirate bt Id 
+GET https://cse341project-heyrend.onrender.com/pirates/67a80eecac70f2e17605467b
 
-### Create contact Post
-POST https://cse341-heyrend.onrender.com/pirates/ HTTP/1.1
+### Create pirate Post
+POST https://cse341project-heyrend.onrender.com/pirates/ HTTP/1.1
 content-type: application/json
 
 {
-"firstName": "Heidi", "lastName": "Heyrend", "email": "heidi.heyrend@test.com", "favoriteColor": "Blue", "birthday": "12/28/1964"
-} 
-
-### Put Contact 
-PUT https://cse341-heyrend.onrender.com/pirates/679ef8001ac462f2e4bc7190 HTTP/1.1
-content-type: application/json
-
-{
-"firstName": "Morgan", "lastName": "Turner", "email": "MTurn@test.com", "favoriteColor": "Orange", "birthday": "08/28/1986" 
+    "fullName": "Nico Robin", "orgin": "West Blue", "birthday": "02/06", "status": "Alive", "fruitType": "Paramecia", "affiliations": "StrawHat Pirate", "position": "Archaeologist"
 }
-### Delete Contact
-DELETE https://cse341-heyrend.onrender.com/pirates/679ef7571ac462f2e4bc718f HTTP/1.1
+### Put pirate 
+PUT https://cse341project-heyrend.onrender.com/pirates/67a80eecac70f2e176054680 HTTP/1.1
+content-type: application/json
+
+{
+    "fullName": "Shanks", "orgin": "West Blue", "birthday": "03/09", "status": "Alive", "fruitType": "N/A", "affiliations": "Red Haired Pirate", "position": "Captain"
+}
+### Delete pirate
+DELETE https://cse341project-heyrend.onrender.com/pirates/67a81ece826f2704f267c3d2 HTTP/1.1
 content-type: application/json
 
 ### Swagger
-GET https://cse341-heyrend.onrender.com/api-docs/
+GET https://cse341project-heyrend.onrender.com/api-docs/
