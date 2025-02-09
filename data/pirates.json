@@ -3,8 +3,8 @@
     "fullName": "Monkey D. Luffy",
     "orgin": "East Blue",
     "birthday": "05/05",
-    "fruitType": "Mythical Zoan",
     "status": "Alive",
+    "fruitType": "Mythical Zoan",
     "affiliations": "StrawHat Pirate",
     "position": "Captain"
   },
@@ -12,8 +12,8 @@
     "fullName": "Roronoa Zoro",
     "orgin": "East Blue",
     "birthday": "11/11",
-    "fruitType": "N/A",
     "status": "Alive",
+    "fruitType": "N/A",
     "affiliations": "StrawHat Pirate",
     "position": "Swordsman"
     
@@ -22,46 +22,46 @@
     "fullName": "Trafalgar D. Water Law",
     "orgin": "North Blue",
     "birthday": "10/06",
-    "fruitType": "Paramecia",
     "status": "Alive",
+    "fruitType": "Paramecia",
     "affiliations": "Heart Pirate",
     "position": "Captain"
   },
   { 
-    "fullName": "Trafalgar D. Water Law",
-    "orgin": "North Blue",
-    "birthday": "10/06",
-    "fruitType": "Paramecia",
+    "fullName": "Portgas D. Ace",
+    "orgin": "South Blue",
+    "birthday": "01/01",
+    "status": "Deceased",
+    "fruitType": "Logia",
+    "affiliations": "Whitebeard Pirate",
+    "position": "2nd Division Commander"
+  },
+  { 
+    "fullName": "Marshall D. Teach",
+    "orgin": "Grand Line",
+    "birthday": "08/03",
     "status": "Alive",
-    "affiliations": "Heart Pirate",
+    "fruitType": "Logia",
+    "affiliations": "Blackbeard Pirate",
     "position": "Captain"
   },
   { 
-    "fullName": "Trafalgar D. Water Law",
-    "orgin": "North Blue",
-    "birthday": "10/06",
+    "fullName": "Edward Newgate",
+    "orgin": "Grand Line",
+    "birthday": "04/06",
+    "status": "Deceased",
     "fruitType": "Paramecia",
-    "status": "Alive",
-    "affiliations": "Heart Pirate",
+    "affiliations": "Whitebeard Pirate",
     "position": "Captain"
   },
   { 
-    "fullName": "Trafalgar D. Water Law",
-    "orgin": "North Blue",
-    "birthday": "10/06",
-    "fruitType": "Paramecia",
+    "fullName": "Figarland Shanks",
+    "orgin": "West Blue",
+    "birthday": "03/09",
     "status": "Alive",
-    "affiliations": "Heart Pirate",
+    "fruitType": "N/A",
+    "affiliations": "Red Haired Pirate",
     "position": "Captain"
-  },
-  { 
-    "fullName": "",
-    "orgin": "",
-    "birthday": "",
-    "fruitType": "",
-    "status": "",
-    "affiliations": "",
-    "position": ""
   }
 
 ]
