@@ -23,9 +23,9 @@ app.use(bodyParser.json());
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.use((req, res, next) => {
-  const allowedbirthPlace =
+  const allowedOrigin =
     process.env.NODE_ENV === "production" ? "https://cse341project-heyrend.onrender.com" : "http://localhost:8080";
-    res.setHeader("Access-Control-Allow-birthPlace", allowedbirthPlace);
+    res.setHeader("Access-Control-Allow-allowedOrigin", allowedOrigin);
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
     res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
     
