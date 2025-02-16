@@ -24,6 +24,12 @@ const doc = {
       description: "Local development server",
     }
   ],
+"tags": [
+  {
+    "name": "Pirates",
+    "description": "Operations about One Piece pirates"
+  }
+],
 };
 
 // Output file

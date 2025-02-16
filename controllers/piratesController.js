@@ -7,12 +7,18 @@ piratesController.getAll = async (req, res, next) => {
     /*
     #swagger.summary = "Get all known pirates"
     #swagger.description = "Returns all pirates"
+    #swagger.tags = ['Pirates']
     */
-  const result = await mongodb.getDb().db().collection("pirates").find();
-  result.toArray().then((lists) => {
-    res.setHeader("Content-Type", "application/json");
-    res.status(200).json(lists);
+   try {
+    const result = await mongodb.getDb().db().collection("pirates").find();
+    result.toArray().then((lists) => {
+      res.setHeader("Content-Type", "application/json");
+      res.status(200).json(lists);
   });
+  } catch (error) {
+    console.error("Error getting pirates:", error);
+    res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
+  }
 };
 /* 
 Get Pirate by ID 
@@ -47,6 +53,7 @@ piratesController.createPirate = async (req, res, next) => {
     #swagger.description = 'Add a pirate to the database'
     #swagger.tags = ['Pirates']
     */ 
+   try {
    const pirate = {
     fullName: req.body.fullName,
     birthPlace: req.body.birthPlace,
@@ -58,12 +65,16 @@ piratesController.createPirate = async (req, res, next) => {
    };
    const response = await mongodb.getDb().db().collection("pirates").insertOne(pirate);
   if (response.acknowledged) {
-    res.status(201).json(response);
+    res.setHeader("Content-Type", "application/json");
+    res.status(201).json({ message: "Pirate created successfully.", pirateId: response.insertedId });
   } else {
     res.status(500).json(response.error || "Some error occurred while creating the pirate.");
   }
+} catch (error) {
+  console.error("Error creating pirate:", error);
+  res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
 };
-
+};
 /* 
 PUT 
 Update pirate in the database by ID 
@@ -73,7 +84,8 @@ piratesController.updatePirate = async (req, res, next) => {
     #swagger.summary = 'Update a existing pirate by id'
     #swagger.description = 'Update a existing pirate in the database by id'
     #swagger.tags = ['Pirates']
-  */  
+  */ 
+ try { 
  const pirateId = ObjectId.createFromHexString(req.params.id);
  const pirate = {
     fullName: req.body.fullName,
@@ -90,8 +102,12 @@ console.log(response);
 if (response.modifiedCount > 0) {
   res.status(204).send();
 } else {
-  res.status(500).json(response.error || "Some error occurred while updating the pirate.");
+  res.status(404).json(response.error || "Some error occurred while updating the pirate.");
 }
+ } catch (error) {
+  console.error("Error updating pirate:", error);
+  res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
+  }
 };
 
 /*
@@ -104,14 +120,20 @@ piratesController.deletePirate = async (req, res, next) => {
     #swagger.description = "Delete a pirate in the database by id"
     #swagger.tags = ['Pirates']
   */
+ try {
  const pirateId = ObjectId.createFromHexString(req.params.id);
  const response = await mongodb.getDb().db().collection("pirates").deleteOne({ _id: pirateId });
   
  console.log(response);
   if (response.deletedCount > 0) {
-    res.status(204).send();
+    res.status(200).send();
   } else {
-    res.status(500).json(response.error || "Some error occurred while deleting the pirate.");
+    res.status(404).json(response.error || "Some error occurred while deleting the pirate.");
   }
+} catch (error) {
+  console.error("Error deleting pirate:", error);
+  res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
 };
-module.exports = piratesController
+};
+
+module.exports = piratesController;

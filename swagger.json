@@ -23,14 +23,26 @@
       "description": "Local development server"
     }
   ],
+  "tags": [
+    {
+      "name": "Pirates",
+      "description": "Operations about One Piece pirates"
+    }
+  ],
   "paths": {
     "/pirates/": {
       "get": {
+        "tags": [
+          "Pirates"
+        ],
         "summary": "Get all known pirates",
         "description": "Returns all pirates",
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
@@ -40,9 +52,15 @@
         ],
         "summary": "Add a pirate",
         "description": "Add a pirate to the database",
+        "produces": [
+          "application/json"
+        ],
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -131,6 +149,12 @@
           "204": {
             "description": "No Content"
           },
+          "404": {
+            "description": "Not Found"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -185,8 +209,11 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
           },
           "500": {
             "description": "Internal Server Error"
