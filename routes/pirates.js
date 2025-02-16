@@ -2,6 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const piratesController = require("../controllers/piratesController");
+const utilities = require("../utilities");
 const validation = require("../utilities/pirate-validation");
 
 // Get all pirates
