@@ -28,6 +28,10 @@ const doc = {
   {
     "name": "Pirates",
     "description": "Operations about One Piece pirates"
+  },
+  {
+    "name": "Users",
+    "description": "Operations about One Piece pirate's ships"
   }
 ],
 };
