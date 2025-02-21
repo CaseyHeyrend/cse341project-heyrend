@@ -6,7 +6,8 @@ router.get("/", (req, res) => {
     res.send("<h2>Welcome to the One Piece Pirate Project API!</h2>");
   });
 router.use("/pirates", require("./pirates"));
-//router.use("/weapons", require("./weapons"));
+router.use("/users", require("./ships"));
+//router.use("/weapons", require("./weapons"))
 
 //router.use("/api-docs", require("./swagger"));
 

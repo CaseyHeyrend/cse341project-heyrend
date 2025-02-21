@@ -33,14 +33,14 @@ GET http://localhost:8080/api-docs/
 
 //Lesson 06 
 ### PUT
-PUT http://localhost:8080/pirates/67b162d3b0df1bac3d415099 HTTP/1.1
+PUT http://localhost:8080/pirates/67b16ac2287b967356d2044b HTTP/1.1
 Content-Type: application/json
 
 {
     "fullName": "Eustass Kid", "birthPlace": "South Blue", "birthday": "01/10", "status": "Unknown", "fruitType": "Paramecia", "affiliations": "Kid Pirate", "position": "Captain"
 }
 ### DELETE
-DELETE http://localhost:8080/pirates/67b1631bb0df1bac3d41509a HTTP/1.1
+DELETE http://localhost:8080/pirates/67b16ae7287b967356d2044c HTTP/1.1
 Content-Type: application/json
 
 // PRODUCTION Deploy or render.com 
@@ -77,12 +77,12 @@ GET https://cse341project-heyrend.onrender.com/api-docs/
 //Lesson 06
 // error to show 67a8227a67cd4b73113dfa11
 ### PUT
-PUT https://cse341project-heyrend.onrender.com/pirates/67b162d3b0df1bac3d415099 HTTP/1.1
+PUT https://cse341project-heyrend.onrender.com/pirates/67b16c8f287b967356d2044d HTTP/1.1
 Content-Type: application/json
 
 {
     "fullName": "Eustass Kid", "birthPlace": "South Blue", "birthday": "01/10", "status": "Unknown", "fruitType": "Paramecia", "affiliations": "Kid Pirate", "position": "Captain"
 }
 ### DELETE
-DELETE https://cse341project-heyrend.onrender.com/pirates/67b1631bb0df1bac3d41509a HTTP/1.1
+DELETE https://cse341project-heyrend.onrender.com/pirates/67b16c93287b967356d2044e HTTP/1.1
 Content-Type: application/json
