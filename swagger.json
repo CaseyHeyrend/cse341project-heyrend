@@ -254,6 +254,9 @@
           "201": {
             "description": "Created"
           },
+          "409": {
+            "description": "Conflict"
+          },
           "412": {
             "description": "Precondition Failed"
           },
@@ -267,10 +270,16 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "user": {
+                  "usership": {
+                    "example": "any"
+                  },
+                  "userShipBody": {
                     "example": "any"
                   },
                   "password": {
+                    "example": "any"
+                  },
+                  "owner": {
                     "example": "any"
                   }
                 }
@@ -280,7 +289,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "/users/{usership}": {
       "get": {
         "tags": [
           "Ships"
@@ -289,7 +298,7 @@
         "description": "Returns a ships with specified id",
         "parameters": [
           {
-            "name": "id",
+            "name": "usership",
             "in": "path",
             "required": true,
             "schema": {
@@ -317,7 +326,7 @@
         "description": "Update a existing ship in the database by id",
         "parameters": [
           {
-            "name": "id",
+            "name": "usership",
             "in": "path",
             "required": true,
             "schema": {
@@ -332,6 +341,9 @@
           "404": {
             "description": "Not Found"
           },
+          "409": {
+            "description": "Conflict"
+          },
           "412": {
             "description": "Precondition Failed"
           },
@@ -345,10 +357,13 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "user": {
+                  "usership": {
                     "example": "any"
                   },
                   "password": {
+                    "example": "any"
+                  },
+                  "owner": {
                     "example": "any"
                   }
                 }
@@ -365,7 +380,7 @@
         "description": "Delete a ship in the database by id",
         "parameters": [
           {
-            "name": "id",
+            "name": "usership",
             "in": "path",
             "required": true,
             "schema": {
