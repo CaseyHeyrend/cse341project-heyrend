@@ -30,8 +30,8 @@ const doc = {
     "description": "Operations about One Piece pirates"
   },
   {
-    "name": "Users",
-    "description": "Operations about One Piece pirate's ships"
+    "name": "Ships",
+    "description": "Operations about One Piece pirate's ships also known as the User"
   }
 ],
 };

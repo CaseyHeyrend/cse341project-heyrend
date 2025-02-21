@@ -29,8 +29,8 @@
       "description": "Operations about One Piece pirates"
     },
     {
-      "name": "Users",
-      "description": "Operations about One Piece pirate's ships"
+      "name": "Ships",
+      "description": "Operations about One Piece pirate's ships also known as the User"
     }
   ],
   "paths": {
@@ -225,7 +225,7 @@
         }
       }
     },
-    "/users/": {
+    "/ships/": {
       "get": {
         "tags": [
           "Ships"
@@ -289,7 +289,7 @@
         }
       }
     },
-    "/users/{usership}": {
+    "/ships/{usership}": {
       "get": {
         "tags": [
           "Ships"
