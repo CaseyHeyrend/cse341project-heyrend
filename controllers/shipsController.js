@@ -30,8 +30,9 @@ shipsController.getShip = async (req, res, next) => {
     #swagger.tags = ['Ships']
     */
     try {
-        const shipId = ObjectId.createFromHexString(req.params.id);
-        const result = await mongodb.getDb().db().collection("ships").findOne({ _id: shipId });
+      const usership = req.params.usership;
+
+      const result = await mongodb.getDb().db().collection("ships").findOne({ usership });
     
         if (!result) {
           return res.status(404).json({ message: "User not found." });
@@ -54,17 +55,25 @@ shipsController.createShip = async (req, res, next) => {
     #swagger.tags = ['Ships']
     */ 
    try {
+    const userShipBody = req.body.usership;// New user ship from the request body
+
    const ship = {
-    user: req.body.user,
+    usership: req.body.userShipBody,
     password: req.body.password,
+    owner: req.body.owner,
    };
-   const response = await mongodb.getDb().db().collection("ships").insertOne(ship);
-  if (response.acknowledged) {
-    res.setHeader("Content-Type", "application/json");
-    res.status(201).json({ message: "User created successfully.", shipId: response.insertedId });
-  } else {
-    res.status(500).json(response.error || "Some error occurred while creating the user.");
-  }
+   // Check if the user exists
+   const existingShip = await mongodb.getDb().db().collection("ships").findOne({ usership: userShipBody });
+    if (existingShip) {
+      return res.status(409).json({ message: "User already exists." });
+    }
+    const response = await mongodb.getDb().db().collection("ships").insertOne(ship);
+    if (response.acknowledged) {
+      res.setHeader("Content-Type", "application/json");
+      res.status(201).json({ message: "User created successfully.", shipId: response.insertedId });
+    } else {
+      res.status(500).json(existingShip.error || "Some error occurred while creating the user.");
+    }
 } catch (error) {
   console.error("Error creating user:", error);
   res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
@@ -81,18 +90,35 @@ shipsController.updateShip = async (req, res, next) => {
     #swagger.tags = ['Ships']
   */ 
  try { 
- const shipId = ObjectId.createFromHexString(req.params.id);
- const ship = {
-  user: req.body.user,
-  password: req.body.password,
-  };
-const response = await mongodb.getDb().db().collection("ships").replaceOne({ _id: shipId }, ship);
+const userShipParam = req.params.usership;// this is the user to be updated
+const userShipBody = req.body.usership;// New user ship from the request body
+// Check if the user exists
+const paramUserShip = await mongodb.getDb().db().collection("ships").findOne({ usership: paramUserShip });
+if (!paramUserShip) {
+  return res.status(404).json({ message: "User not found." });
+}
 
-console.log(response);
+ const ship = {
+  usership: req.body.usership,
+  password: req.body.password,
+  owner: req.body.owner,
+  };
+
+  //the ship is being updated, check if the new ship is already taken
+  if (userShipBody !== userShipParam) {
+    const existingShip = await mongodb.getDb().db().collection("ships").findOne({ usership: userShipBody });
+    if (existingShip) {
+      return res.status(409).json({ message: "Ship is already taken." });
+    }
+  }
+//proceed with the update the ship in the database
+const response = await mongodb.getDb().db().collection("ships").updateOne({ usership: userShipParam }, { $set: ship });
+// If modifiedCount is greater than 0, then the ship was updated successfully
 if (response.modifiedCount > 0) {
-  res.status(204).send();
+  res.status(204).send();//No content, ship updated successfully
 } else {
-  res.status(404).json(response.error || "Some error occurred while updating the user.");
+  res.status(404).json(response.error || "Some error occurred while updating the user. No changes were made.");
+console.log(response);
 }
  } catch (error) {
   console.error("Error updating user:", error);
@@ -111,19 +137,18 @@ shipsController.deleteShip = async (req, res, next) => {
     #swagger.tags = ['Ships']
   */
  try {
- const shipId = ObjectId.createFromHexString(req.params.id);
- const response = await mongodb.getDb().db().collection("ships").deleteOne({ _id: shipId });
-  
- console.log(response);
-  if (response.deletedCount > 0) {
-    res.status(200).send();
-  } else {
-    res.status(404).json(response.error || "Some error occurred while deleting the user.");
-  }
+const usership = req.params.usership;
+const response = await mongodb.getDb().db().collection("ships").deleteOne({ usership });
+if (response.deletedCount > 0) {
+  res.status(200).send();
+}
+else {
+  res.status(404).json(response.error || "Some error occurred while deleting the user.");
+}
 } catch (error) {
   console.error("Error deleting user:", error);
   res.status(500).json({ message: "An unexpected error occurred.", error: error.message });
-};
+}
 };
 
 module.exports = shipsController;

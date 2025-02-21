@@ -2,8 +2,9 @@ const utilities = require('./index');
 
 const saveShips = (req, res, next) => {
   const utilitiesRule = {
-    user: 'required|string',
-    password: 'required|string'
+    usership: 'required|string',
+    password: 'required|string',
+    owner: 'required|string'
   };
   utilities(req.body, utilitiesRule, {}, (err, status) => {
     if (!status) {
