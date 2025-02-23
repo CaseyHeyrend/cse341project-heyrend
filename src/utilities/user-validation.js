@@ -1,9 +1,12 @@
+// Desc: User validation rules
 const utilities = require('./index');
 
-const saveShips = (req, res, next) => {
+const userRules = (req, res, next) => {
   const utilitiesRule = {
     username: 'required|string',
     password: 'required|string',
+    email: 'required|email',
+    name: 'required|string',
     owner: 'required|string'
   };
   utilities(req.body, utilitiesRule, {}, (err, status) => {
@@ -19,4 +22,4 @@ const saveShips = (req, res, next) => {
   });
 };
 
-module.exports = {saveShips};
+module.exports = {userRules};
