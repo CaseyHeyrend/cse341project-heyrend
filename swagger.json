@@ -228,10 +228,10 @@
     "/ships/": {
       "get": {
         "tags": [
-          "Ships"
+          "Users"
         ],
-        "summary": "Get all known ships",
-        "description": "Returns all ships in the database",
+        "summary": "Get all known users",
+        "description": "Returns all users in the database",
         "responses": {
           "200": {
             "description": "OK"
@@ -243,10 +243,10 @@
       },
       "post": {
         "tags": [
-          "Ships"
+          "Users"
         ],
-        "summary": "Add a ship to the database",
-        "description": "Add a ship to the database",
+        "summary": "Add a user to the database",
+        "description": "Add a user to the database",
         "produces": [
           "application/json"
         ],
@@ -273,10 +273,13 @@
                   "username": {
                     "example": "any"
                   },
-                  "usernameBody": {
+                  "password": {
                     "example": "any"
                   },
-                  "password": {
+                  "email": {
+                    "example": "any"
+                  },
+                  "name": {
                     "example": "any"
                   },
                   "owner": {
@@ -292,10 +295,10 @@
     "/ships/{username}": {
       "get": {
         "tags": [
-          "Ships"
+          "Users"
         ],
-        "summary": "Get ships by id",
-        "description": "Returns a ships with specified id",
+        "summary": "Get user by id",
+        "description": "Returns a user with specified id",
         "parameters": [
           {
             "name": "username",
@@ -322,8 +325,8 @@
         "tags": [
           "Ships"
         ],
-        "summary": "Update a existing ship by id",
-        "description": "Update a existing ship in the database by id",
+        "summary": "Update a existing user by id",
+        "description": "Update a existing user in the database by id",
         "parameters": [
           {
             "name": "username",
@@ -361,6 +364,12 @@
                     "example": "any"
                   },
                   "password": {
+                    "example": "any"
+                  },
+                  "email": {
+                    "example": "any"
+                  },
+                  "name": {
                     "example": "any"
                   },
                   "owner": {

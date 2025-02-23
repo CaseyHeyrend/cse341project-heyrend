@@ -41,7 +41,7 @@ const outputFile = "./swagger.json";
 
 /* NOTE: If you are using the express Router, you must pass in the 'routes' only the
 root file where the route starts, such as index.js, app.js, routes.js, etc ... */
-const routes = ["./routes/index.js"];
+const routes = ["./src/routes/index.js"];
 
 // generate swagger.json
 swaggerAutogen(outputFile, routes, doc);
