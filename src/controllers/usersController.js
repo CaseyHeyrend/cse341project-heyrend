@@ -58,10 +58,10 @@ usersController.createUser = async (req, res, next) => {
     #swagger.tags = ['Users']
     */ 
     try {
-      const userNameBody = req.body.username;// New user from the request body
+      //const userNameBody = req.body.username;// New user from the request body
       
       const ship = {
-        username: usernameBody,
+        username: req.body.username,
         password: req.body.password,
         email: req.body.email,
         name: req.body.name,
