@@ -2,25 +2,25 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
+config = require("dotenv").config();
+const cors = require("cors");
 const { auth } = require('express-openid-connect');
-require("dotenv").config();
+// Auth0
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+// app.use(auth(config));
+// req.isAuthenticated is provided from the auth router
+// app.get('/', (req, res) => {
+//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+// });
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret: process.env.SECRET,
-  baseURL: process.eventNames.BASE_URL,
-  clientID: process.env.CLIENT_ID,
-  issuerBaseURL: process.eventNames.ISSUER_BASE_URL
+  secret: 'a long, randomly-generated string stored in env',
+  baseURL: 'https://cse341project-heyrend.onrender.com',
+  clientID: 'M4EqXyklGjmv6ZhdKARpDVHRKqWS8ZgS',
+  issuerBaseURL: 'https://dev-rziylkii6k2mzn72.us.auth0.com'
 };
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-//
-// app.use(auth(config));
-
-app.get('/', (req, res) => {
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-});
-// Purpose: Main entry point for the project. This file is responsible for setting up the server, connecting to the database, and defining the routes.
-//express
+// Express
 const app = express();
 
 // Swagger
@@ -29,8 +29,6 @@ const swaggerDocument = require("./swagger.json");
 
 // Database
 const mongodb = require("./src/database/connect");
-
-// Express app
 
 
 // From env flie
