@@ -323,7 +323,7 @@
       },
       "put": {
         "tags": [
-          "Ships"
+          "Users"
         ],
         "summary": "Update a existing user by id",
         "description": "Update a existing user in the database by id",
@@ -383,7 +383,7 @@
       },
       "delete": {
         "tags": [
-          "Ships"
+          "Users"
         ],
         "summary": "Delete a ship by id",
         "description": "Delete a ship in the database by id",

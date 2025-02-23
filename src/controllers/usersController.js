@@ -92,7 +92,7 @@ usersController.updateUser = async (req, res, next) => {
     /*
     #swagger.summary = 'Update a existing user by id'
     #swagger.description = 'Update a existing user in the database by id'
-    #swagger.tags = ['Ships']
+    #swagger.tags = ['Users']
   */ 
  try { 
   const userNameParam = req.params.username;// this is the user to be updated
@@ -142,7 +142,7 @@ usersController.deleteUser = async (req, res, next) => {
     /*
     #swagger.summary = "Delete a ship by id"
     #swagger.description = "Delete a ship in the database by id"
-    #swagger.tags = ['Ships']
+    #swagger.tags = ['Users']
   */
  try {
   const username = req.params.username;
