@@ -1,6 +1,7 @@
 // Desc: Ships controller
 // Import the mongodb connection
-const mongodb = require("./src/database/connect");
+const mongodb = require("../database/connect");
+// Import ObjectId
 const ObjectId = require("mongodb").ObjectId;
 
 const usersController = {}

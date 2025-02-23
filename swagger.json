@@ -225,7 +225,7 @@
         }
       }
     },
-    "/ships/": {
+    "/users/": {
       "get": {
         "tags": [
           "Users"
@@ -292,7 +292,7 @@
         }
       }
     },
-    "/ships/{username}": {
+    "/users/{username}": {
       "get": {
         "tags": [
           "Users"
