@@ -9,10 +9,10 @@ const homeinfo = `
   <ul>
 <menu>
   <li><button id="logout">logout</button></li>
-  <li><button id="google">Log in with Google</button></li>
   <li><button id="github">Log in with GitHub</button></li>
 </menu>
 `;// Github OAuth Callback Url! is working hopefully
+//<li><button id="google">Log in with Google</button></li>
 router.get("/", (req, res) => {
   // #swagger.ignore = true
   res.send(homeinfo)

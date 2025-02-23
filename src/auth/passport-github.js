@@ -7,13 +7,13 @@ passport.use(
     {
       clientID: process.env.CLIENT_ID,
       clientSecret: process.env.CLIENT_SECRET,
-      callbackURL: "/auth/google/callback",
+      callbackURL: "/auth/github/callback",
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
-        let user = await User.findOne({ googleId: profile.id });
+        let user = await User.findOne({ githubId: profile.id });
         if (!user) {
-          user = await User.create({ googleId: profile.id, name: profile.displayName });
+          user = await User.create({ githubId: profile.id, name: profile.displayName });
         }
         return done(null, user);
       } catch (err) {
