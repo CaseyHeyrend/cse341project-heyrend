@@ -270,10 +270,10 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "usership": {
+                  "username": {
                     "example": "any"
                   },
-                  "userShipBody": {
+                  "usernameBody": {
                     "example": "any"
                   },
                   "password": {
@@ -289,7 +289,7 @@
         }
       }
     },
-    "/ships/{usership}": {
+    "/ships/{username}": {
       "get": {
         "tags": [
           "Ships"
@@ -298,7 +298,7 @@
         "description": "Returns a ships with specified id",
         "parameters": [
           {
-            "name": "usership",
+            "name": "username",
             "in": "path",
             "required": true,
             "schema": {
@@ -326,7 +326,7 @@
         "description": "Update a existing ship in the database by id",
         "parameters": [
           {
-            "name": "usership",
+            "name": "username",
             "in": "path",
             "required": true,
             "schema": {
@@ -357,7 +357,7 @@
               "schema": {
                 "type": "object",
                 "properties": {
-                  "usership": {
+                  "username": {
                     "example": "any"
                   },
                   "password": {
@@ -380,7 +380,7 @@
         "description": "Delete a ship in the database by id",
         "parameters": [
           {
-            "name": "usership",
+            "name": "username",
             "in": "path",
             "required": true,
             "schema": {

@@ -1,27 +1,32 @@
 [
     {
-        "usership": "thousand_sunny",
+        "username": "thousand_sunny",
         "password": "strawhat",
+        "Name": "Thousand Sunny",
         "Owner": "Monkey D. Luffy"
     },
     {
-        "usership": "polar_tang",
+        "username": "polar_tang",
         "password": "Heart",
+        "Name": "Polar Tang",
         "Owner": "Trafalgar D. Water Law"
     },
     {
-        "usership": "red_force",
+        "username": "red_force",
         "password": "Red-Hair",
+        "Name": "Red Force",
         "Owner": "Shanks"
     },
     {
-        "usership": "moby_dick",
+        "username": "moby_dick",
         "password": "Whitebeard",
+        "Name": "Moby Dick",
         "Owner": "Edward Newgate"
     },
     {
-        "usership": "saber_of_xebec",
+        "username": "saber_of_xebec",
         "password": "Blackbeard",
+        "Name": "Saber of Xebec",
         "Owner": "Marshall D. Teach"
     }
 ]

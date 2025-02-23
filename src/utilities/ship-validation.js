@@ -2,7 +2,7 @@ const utilities = require('./index');
 
 const saveShips = (req, res, next) => {
   const utilitiesRule = {
-    usership: 'required|string',
+    username: 'required|string',
     password: 'required|string',
     owner: 'required|string'
   };

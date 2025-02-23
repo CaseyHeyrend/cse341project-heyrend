@@ -5,8 +5,8 @@ const shipsController = {}
 
 shipsController.getAll = async (req, res, next) => {
     /*
-    #swagger.summary = "Get all known ships"
-    #swagger.description = "Returns all ships in the database"
+    #swagger.summary = "Get all known users"
+    #swagger.description = "Returns all users in the database"
     #swagger.tags = ['Ships']
     */
    try {
@@ -30,9 +30,9 @@ shipsController.getShip = async (req, res, next) => {
     #swagger.tags = ['Ships']
     */
     try {
-      const usership = req.params.usership;
+      const username = req.params.username;
 
-      const result = await mongodb.getDb().db().collection("ships").findOne({ usership });
+      const result = await mongodb.getDb().db().collection("ships").findOne({ username });
     
         if (!result) {
           return res.status(404).json({ message: "User not found." });
@@ -55,15 +55,16 @@ shipsController.createShip = async (req, res, next) => {
     #swagger.tags = ['Ships']
     */ 
    try {
-    const userShipBody = req.body.usership;// New user ship from the request body
+    const userNameBody = req.body.username;// New user ship from the request body
 
    const ship = {
-    usership: req.body.userShipBody,
+    username: req.body.usernameBody,
     password: req.body.password,
+    name: req.body.name,
     owner: req.body.owner,
    };
    // Check if the user exists
-   const existingShip = await mongodb.getDb().db().collection("ships").findOne({ usership: userShipBody });
+   const existingShip = await mongodb.getDb().db().collection("ships").findOne({ username: userNameBody });
     if (existingShip) {
       return res.status(409).json({ message: "User already exists." });
     }
@@ -81,38 +82,39 @@ shipsController.createShip = async (req, res, next) => {
 };
 /* 
 PUT 
-Update ship in the database by ID 
+Update user in the database by ID 
 */
 shipsController.updateShip = async (req, res, next) => {
     /*
-    #swagger.summary = 'Update a existing ship by id'
-    #swagger.description = 'Update a existing ship in the database by id'
+    #swagger.summary = 'Update a existing user by id'
+    #swagger.description = 'Update a existing user in the database by id'
     #swagger.tags = ['Ships']
   */ 
  try { 
-const userShipParam = req.params.usership;// this is the user to be updated
-const userShipBody = req.body.usership;// New user ship from the request body
+const userNameParam = req.params.username;// this is the user to be updated
+const userNameBody = req.body.username;// New user  from the request body
 // Check if the user exists
-const paramUserShip = await mongodb.getDb().db().collection("ships").findOne({ usership: paramUserShip });
-if (!paramUserShip) {
+const paramuserName = await mongodb.getDb().db().collection("ships").findOne({ username: paramuserName });
+if (!paramuserName) {
   return res.status(404).json({ message: "User not found." });
 }
 
  const ship = {
-  usership: req.body.usership,
+  username: req.body.username,
   password: req.body.password,
+  name: req.body.name,
   owner: req.body.owner,
   };
 
   //the ship is being updated, check if the new ship is already taken
-  if (userShipBody !== userShipParam) {
-    const existingShip = await mongodb.getDb().db().collection("ships").findOne({ usership: userShipBody });
+  if (userNameBody !== userNameParam) {
+    const existingShip = await mongodb.getDb().db().collection("ships").findOne({ username: userNameBody });
     if (existingShip) {
       return res.status(409).json({ message: "Ship is already taken." });
     }
   }
 //proceed with the update the ship in the database
-const response = await mongodb.getDb().db().collection("ships").updateOne({ usership: userShipParam }, { $set: ship });
+const response = await mongodb.getDb().db().collection("ships").updateOne({ username: userNameParam }, { $set: ship });
 // If modifiedCount is greater than 0, then the ship was updated successfully
 if (response.modifiedCount > 0) {
   res.status(204).send();//No content, ship updated successfully
@@ -137,8 +139,8 @@ shipsController.deleteShip = async (req, res, next) => {
     #swagger.tags = ['Ships']
   */
  try {
-const usership = req.params.usership;
-const response = await mongodb.getDb().db().collection("ships").deleteOne({ usership });
+const username = req.params.username;
+const response = await mongodb.getDb().db().collection("ships").deleteOne({ username });
 if (response.deletedCount > 0) {
   res.status(200).send();
 }
