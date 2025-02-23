@@ -1,16 +1,17 @@
-// the modules
+// Purpose: Main entry point for the project. This file is responsible for setting up the server, connecting to the database, and defining the routes.
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 
-//Swagger
+// Swagger
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 
-// Local mods
-const mongodb = require("./database/connect");
+// Database
+const mongodb = require("./src/database/connect");
 
-// Server
+// Express app
 const app = express();
 
 // From env flie
@@ -42,9 +43,9 @@ app.use((req, res, next) => {
   });
 
 //  import routes
-const piratesRoutes = require("./routes/pirates");
+const piratesRoutes = require("./src/routes/pirates");
 // routes
-app.use("/", require("./routes"))
+app.use("/", require("./src/routes"))
 app.use("/pirates", piratesRoutes);
 
 // 404 middleware for unknown routes 
