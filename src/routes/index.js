@@ -16,7 +16,7 @@ const homeinfo = `
 router.get("/", (req, res) => {
   // #swagger.ignore = true
   res.send(homeinfo)
-  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+  //res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 router.use("/pirates", require("./pirates"));//pirates
 router.use("/users", require("./users"));//ships

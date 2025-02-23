@@ -3,23 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 config = require("dotenv").config();
-const cors = require("cors");
-const { auth } = require('express-openid-connect');
-// Auth0
-// auth router attaches /login, /logout, and /callback routes to the baseURL
-// app.use(auth(config));
-// req.isAuthenticated is provided from the auth router
-// app.get('/', (req, res) => {
-//   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
-// });
-const config = {
-  authRequired: false,
-  auth0Logout: true,
-  secret: 'a long, randomly-generated string stored in env',
-  baseURL: 'https://cse341project-heyrend.onrender.com',
-  clientID: 'M4EqXyklGjmv6ZhdKARpDVHRKqWS8ZgS',
-  issuerBaseURL: 'https://dev-rziylkii6k2mzn72.us.auth0.com'
-};
+
 // Express
 const app = express();
 
