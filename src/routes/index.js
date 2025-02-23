@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const homeinfo = `
-"<h2>Welcome to the One Piece Pirate Project API!</h2>
+<h2>Welcome to the One Piece Pirate Project API!</h2>
 <h4>Here you can find information about the pirates and ships in the world of One Piece.</h4>
 <p> Sign up or log in to access the API.</p>
 <menu>
