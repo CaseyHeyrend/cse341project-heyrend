@@ -8,8 +8,12 @@ const pirateSchema = new Schema({
     fullName: String,
     birthPlace: String,
     birthday: String,
-    status: String,
-    fruitType: String,
+    status: {String,
+        enum: ['Alive', 'Deceased', 'Unknown']
+    },
+    fruitType: {String,
+        enum: ['Paramecia', 'Zoan', 'Logia, Mythical Zoan', 'Ancient Zoan', 'Artificial Zoan', 'Special Paramecia', "N/A"] 
+    },
     affiliations: String,
     position: String
 });
