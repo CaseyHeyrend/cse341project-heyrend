@@ -1,3 +1,4 @@
+const { embertest } = require("globals");
 const mongodb = require("../database/connect");
 const ObjectId = require("mongodb").ObjectId;
 
@@ -60,6 +61,7 @@ shipsController.createShip = async (req, res, next) => {
    const ship = {
     username: req.body.usernameBody,
     password: req.body.password,
+    email: req.body.email,
     name: req.body.name,
     owner: req.body.owner,
    };
@@ -102,6 +104,7 @@ if (!paramuserName) {
  const ship = {
   username: req.body.username,
   password: req.body.password,
+  email: req.body.email,
   name: req.body.name,
   owner: req.body.owner,
   };

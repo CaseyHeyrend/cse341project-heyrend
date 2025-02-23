@@ -2,31 +2,37 @@
     {
         "username": "thousand_sunny",
         "password": "strawhat",
-        "Name": "Thousand Sunny",
-        "Owner": "Monkey D. Luffy"
+        "email": "strawhat10@test.com",
+        "name": "Thousand Sunny",
+        "owner": "Monkey D. Luffy"
     },
     {
         "username": "polar_tang",
         "password": "Heart",
-        "Name": "Polar Tang",
-        "Owner": "Trafalgar D. Water Law"
+        "email": "RipPolarTang@test.com",
+        "name": "Polar Tang",
+        "owner": "Trafalgar D. Water Law"
     },
     {
         "username": "red_force",
         "password": "Red-Hair",
-        "Name": "Red Force",
-        "Owner": "Shanks"
+        "email": "OldpirateKingcrew@test.com",
+        "name": "Red Force",
+        "owner": "Shanks"  
     },
     {
         "username": "moby_dick",
         "password": "Whitebeard",
-        "Name": "Moby Dick",
-        "Owner": "Edward Newgate"
+        "email": "FatherofGrandline@test.com",
+        "name": "Moby Dick",
+        "owner": "Edward Newgate"
+        
     },
     {
         "username": "saber_of_xebec",
         "password": "Blackbeard",
-        "Name": "Saber of Xebec",
-        "Owner": "Marshall D. Teach"
+        "email": "StealingFruits@test.com",
+        "name": "Saber of Xebec",
+        "owner": "Marshall D. Teach"
     }
 ]
