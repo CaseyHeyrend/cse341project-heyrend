@@ -19,7 +19,7 @@ router.get("/", (req, res) => {
 });
 router.use("/pirates", require("./pirates"));//pirates
 router.use("/users", require("./users"));//ships
-router.use("/auth", require("./auth"));//auth
+router.use("/oauth", require("./oauth"));//oauth
 //router.use("/weapons", require("./weapons"))
 
 //router.use("/api-docs", require("./swagger"));
