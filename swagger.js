@@ -34,6 +34,25 @@ const doc = {
     "description": "Operations about One Piece pirate's ships also known as the User"
   }
 ],
+components: {
+  securitySchemes: {
+    OAuth2: {
+      type: "oauth2",
+      description: "This API uses OAuth 2 with the authorizationCode grant flow.",
+      flows: {
+        authorizationCode: {
+          authorizationUrl: "https://dev-27e8hpwlly70ztgu.us.auth0.com/authorize",
+          tokenUrl: "https://dev-27e8hpwlly70ztgu.us.auth0.com/oauth/token",
+          scopes: {
+            read: "Grants read access",
+            write: "Grants write access",
+            admin: "Grants access to admin operations",
+          },
+        },
+      },
+    },
+  },
+},
 };
 
 // Output file
