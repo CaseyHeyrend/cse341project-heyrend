@@ -1,16 +1,6 @@
 const express = require("express");
 const router = express.Router();
 
-//const homeinfo = `
-//<h2>Welcome to the One Piece Pirate Project API!</h2>
-//<h4>Here you can find information about the pirates and ships in the world of One Piece.</h4>
-//<p> Sign up or log in to access the API.</p>
-//<menu><ul>
-//<menu><li><button id="login">login</button></li><li><button id="signup">signup</button></li><li><button id="logout">logout</button></li>
-//<li><button id="github">Log in with GitHub</button></li>
-//</menu> </ul>`;
-// Github OAuth Callback Url! is working hopefully
-//<li><button id="google">Log in with Google</button></li>
 const logout = `
 <h2> Welcome to the One Piece Pirate Project API!</h2>
 <h3> You have been logged out.</h3>
