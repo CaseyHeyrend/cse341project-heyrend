@@ -1,4 +1,13 @@
 require("dotenv").config();
+ //if (error.status) {
+     //res.status(error.status);
+  //} else {
+     //res.status(500);
+  // }
+   //res.json({ message: error.message });
+//});
+
+
 
 const config = {
   authRequired: false,
