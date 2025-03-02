@@ -11,5 +11,3 @@ account.js
 accountController.js
 
 models
-
-auth0.js
