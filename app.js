@@ -2,18 +2,23 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
-config = require("dotenv").config();
+const { auth } = require("express-openid-connect");
 
-// Express
-const app = express();
+// Local Modules
+// require("./src/auth/passport-google");
+// require("./src/auth/passport-github");
+const config = require("./src/auth/auth0");
+
 
 // Swagger
 const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 
-// Database
+// local modules
 const mongodb = require("./src/database/connect");
 
+// server initialization
+const app = express();
 
 // From env flie
 const port = process.env.PORT || 8080;
@@ -29,9 +34,6 @@ app.use((error, req, res, next) => {
   }
 });
 
-// Swagger
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
 // CORS middleware
 app.use((req, res, next) => {
   const allowedOrigin =
@@ -42,14 +44,21 @@ app.use((req, res, next) => {
     
     next();
   });
+// Auth router attached to /login, /logout, and /callback
+app.use(auth(config));
+
+// Swagger
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+app.use("/", require("./src/routes"));
 
 //  import routes
-const piratesRoutes = require("./src/routes/pirates");
-const usersRoutes = require("./src/routes/users");
+//const piratesRoutes = require("./src/routes/pirates");
+//const usersRoutes = require("./src/routes/users");
 // routes
-app.use("/", require("./src/routes/index"));
-app.use("/pirates", piratesRoutes);
-app.use("/users", usersRoutes);
+//app.use("/", require("./src/routes/index"));
+//app.use("/pirates", piratesRoutes);
+//app.use("/users", usersRoutes);
 
 // 404 middleware for unknown routes 
 app.use((req, res, next) => {

@@ -4,9 +4,10 @@ const router = express.Router();
 const usersController = require("../controllers/usersController");
 const utilities = require("../utilities");
 const validation = require("../utilities/user-validation");
+const { requiresAuth } = require("express-openid-connect");
 
 // Get all ships or user 
-router.get("/", usersController.getAll);
+router.get("/", requiresAuth() ,usersController.getAll);
 // Get ships by username
 router.get("/:username", usersController.getUser);
 // Insert one ships into the database
