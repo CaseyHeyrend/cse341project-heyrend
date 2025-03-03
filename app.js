@@ -1,9 +1,29 @@
 // Purpose: Main entry point for the project. This file is responsible for setting up the server, connecting to the database, and defining the routes.
+require("dotenv").config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
 const jwt = require("jsonwebtoken");
 const { auth } = require("express-openid-connect");
+
+
+
+// JWT configuration
+const payload = { user: "admin" };
+const secret = process.env.JWT_SECRET;
+// This token will be used to authenticate requests
+const token = jwt.sign(payload, secret, { expiresIn: "1d" });
+console.log("generated token", token);
+// This token will be used to authenticate requests
+jwt.verify(token, secret, (err, decoded) => {
+  if (err) {
+    console.log("error verifying token", err);
+  } else {
+    console.log("decoded token", decoded);
+  }
+}
+);
 
 // Local Modules
 // require("./src/auth/passport-google");
@@ -35,6 +55,13 @@ app.use((error, req, res, next) => {
     next();
   }
 });
+// JWT configuration
+
+
+
+
+
+
 
 // CORS middleware
 app.use((req, res, next) => {
