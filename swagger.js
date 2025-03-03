@@ -41,8 +41,8 @@ components: {
       description: "This API uses OAuth 2 with the authorizationCode grant flow.",
       flows: {
         authorizationCode: {
-          authorizationUrl: "https://dev-27e8hpwlly70ztgu.us.auth0.com/authorize",
-          tokenUrl: "https://dev-27e8hpwlly70ztgu.us.auth0.com/oauth/token",
+          authorizationUrl: "https://dev-rziylkii6k2mzn72.us.auth0.com/authorize",
+          tokenUrl: "https://dev-rziylkii6k2mzn72.us.auth0.com/token",
           scopes: {
             read: "Grants read access",
             write: "Grants write access",
