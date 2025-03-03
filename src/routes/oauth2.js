@@ -2,11 +2,11 @@ const express = require("express");
 const router = express.Router();
 // const passport = require("passport");
 
-//const { auth, requiresAuth } = require('express-openid-connect');
+const { auth, requiresAuth } = require('express-openid-connect');
 
 // Gets the user's profile
 
-//router.get('/', requiresAuth(), (req, res) => {
+router.get('/', requiresAuth(), (req, res) => {
   /*
     #swagger.summary = 'Get user profile'
     #swagger.description = 'Returns user profile'
@@ -15,8 +15,8 @@ const router = express.Router();
         "OAuth2": ["read"]
     }]
   */
-  //res.send(JSON.stringify(req.oidc.user));
-//});
+  res.send(JSON.stringify(req.oidc.user));
+});
 
 
 
