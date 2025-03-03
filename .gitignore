@@ -10,7 +10,6 @@ pirateModel.js
 userModel.js
 
 auth0.js
-passport-github.js
-passport-google.js
+
 
 

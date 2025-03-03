@@ -47,7 +47,7 @@ app.use((req, res, next) => {
   });
 // Auth router attached to /login, /logout, and /callback
 
-app.use(auth(config));
+//app.use(auth(config));
 
 // Swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
