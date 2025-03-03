@@ -12,5 +12,5 @@ account.js
 models
 
 auth0.js
-passportgithub.js
-passportgoogle.js
+passport-github.js
+passport-google.js
