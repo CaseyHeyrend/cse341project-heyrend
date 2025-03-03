@@ -2,6 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
+const jwt = require("jsonwebtoken");
 const { auth } = require("express-openid-connect");
 
 // Local Modules
@@ -56,6 +57,8 @@ app.use(auth({
   issuerBaseURL: process.env.ISSUER_BASE_URL,
   secret:process.env.SECRET,
 }));
+
+
 
 
 // Swagger
