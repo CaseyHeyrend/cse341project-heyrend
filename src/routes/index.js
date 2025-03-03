@@ -28,6 +28,7 @@ router.get("/", (req, res) => {
 
 router.use("/pirates", require("./pirates"));//pirates
 router.use("/users", require("./users"));//ships
+//router.use("/profile", require("./oauth2"));//oauth2
 //router.use("/weapons", require("./weapons"))
 
 
