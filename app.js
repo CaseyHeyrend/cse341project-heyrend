@@ -2,8 +2,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
-
-//const { auth } = require("express-openid-connect");
+const { auth } = require("express-openid-connect");
 
 // Local Modules
 // require("./src/auth/passport-google");
@@ -48,7 +47,7 @@ app.use((req, res, next) => {
   });
 // Auth router attached to /login, /logout, and /callback
 
-//app.use(auth(config));
+app.use(auth(config));
 
 // Swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
