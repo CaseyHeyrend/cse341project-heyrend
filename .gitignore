@@ -5,12 +5,13 @@ node_modules
 later
 
 
-
-account.js
-
-
 models
+pirateModel.js
+userModel.js
 
 auth0.js
 passport-github.js
 passport-google.js
+
+
+oauth2.js
