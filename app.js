@@ -59,7 +59,7 @@ app.use("/", require("./src/routes"));
 //const piratesRoutes = require("./src/routes/pirates");
 //const usersRoutes = require("./src/routes/users");
 // routes
-//app.use("/", require("./src/routes/index"));
+app.use("/", require("./src/routes/index"));
 //app.use("/pirates", piratesRoutes);
 //app.use("/users", usersRoutes);
 
