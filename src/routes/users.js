@@ -2,7 +2,6 @@
 const express = require("express");
 const router = express.Router();
 const usersController = require("../controllers/usersController");
-const utilities = require("../utilities");
 const validation = require("../utilities/user-validation");
 const { requiresAuth } = require("express-openid-connect");
 
