@@ -2,13 +2,13 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const MongoClient = require("mongodb").MongoClient;
-const { auth } = require("express-openid-connect");
+//const { auth } = require("express-openid-connect");
 
 // Local Modules
 // require("./src/auth/passport-google");
 // require("./src/auth/passport-github");
 
-const config = require("./src/auth/auth0");
+//const config = require("./src/auth/auth0");
 
 
 // Swagger
@@ -47,7 +47,7 @@ app.use((req, res, next) => {
   });
 // Auth router attached to /login, /logout, and /callback
 
-app.use(auth(config));
+//app.use(auth(config));
 
 // Swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
@@ -55,12 +55,12 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 app.use("/", require("./src/routes"));
 
 //  import routes
-//const piratesRoutes = require("./src/routes/pirates");
-//const usersRoutes = require("./src/routes/users");
+const piratesRoutes = require("./src/routes/pirates");
+const usersRoutes = require("./src/routes/users");
 // routes
 app.use("/", require("./src/routes/index"));
-//app.use("/pirates", piratesRoutes);
-//app.use("/users", usersRoutes);
+app.use("/pirates", piratesRoutes);
+app.use("/users", usersRoutes);
 
 // 404 middleware for unknown routes 
 app.use((req, res, next) => {
